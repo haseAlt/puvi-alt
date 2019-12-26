@@ -146,6 +146,15 @@ It makes it fairly simple to test as mocking its dependencies is easily done.
 
 Check the `FetchBreedsListUseCaseTest` to see an example of it in action.
 
+## Unit tests for the data layer (runs on JVM)
+
+The data layer is very dependant on the framework for tests.
+A Retrofit implementation will require a WebServer, see `RetrofitBreedsServiceTest` to see
+how a `MockWebServer` can help us Unit test a API connection.
+
+We could've easily used Robolectric to test the SharedPreferences implementations.
+Omitted because of the lack of time.
+
 ## Integration tests (runs on a device)
 
 Integration tests are more time consuming to write, and should be reserved for bigger flows,
