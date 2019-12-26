@@ -1,0 +1,2 @@
+include ':app', ':core', ':breeds-data', ':breeds-ui', ':ui'
+rootProject.name='Puvi'

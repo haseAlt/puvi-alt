@@ -1,0 +1,32 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    api Dep.kotlin.std
+    api Dep.kotlin.rxJava
+    api Dep.kotlin.rxKotlin
+    api Dep.kotlin.kelm
+
+    compileOnly Dep.kotlin.threeTenBp
+
+    testApi Dep.kotlin.junit
+    testApi Dep.kotlin.kotlinTest
+    testApi Dep.kotlin.kotlinAssertions
+    testApi Dep.kotlin.spekJvm
+    testApi Dep.kotlin.reflect
+    testApi Dep.kotlin.std8
+    testApi Dep.kotlin.threeTenBp
+    testApi Dep.kotlin.mockk
+    testRuntimeOnly Dep.kotlin.spekRuntime
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}

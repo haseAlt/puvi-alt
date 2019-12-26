@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextTitle.BreedList">
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:textColor">#EFFF</item>
+    </style>
+
+    <style name="TextSubTitle.BreedList">
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:textColor">#EFFF</item>
+    </style>
+</resources>

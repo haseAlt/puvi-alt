@@ -1,0 +1,18 @@
+apply from: '../android-lib.gradle'
+
+dependencies {
+    api project(':core')
+    api project(':breeds-data')
+
+    api Dep.kotlin.motif
+    api Dep.android.navComponent
+    api Dep.android.navComponentUi
+    api Dep.android.rxAndroid
+    api Dep.android.coreKtx
+    api Dep.android.flexbox
+    api Dep.android.constraintLayout
+    api Dep.android.materialComponents
+    api Dep.android.picasso
+    api Dep.android.groupie
+    api Dep.android.groupieKotlin
+}

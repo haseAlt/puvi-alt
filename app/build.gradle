@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+android {
+    compileSdkVersion AndroidConfig.compileSdkVersion
+
+    defaultConfig {
+        applicationId "dev.hasegawa.puvi"
+        minSdkVersion AndroidConfig.minSdkVersion
+        targetSdkVersion AndroidConfig.targetSdkVersion
+
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation project(':ui')
+    implementation project(':breeds-ui')
+
+    implementation Dep.android.threeTenAbp
+    implementation Dep.android.navComponent
+    implementation Dep.android.navComponentUi
+
+    kapt Dep.kotlin.motifCompiler
+
+    testImplementation Dep.kotlin.junit
+
+    androidTestImplementation Dep.android.testRunner
+    androidTestImplementation Dep.android.mockk
+    androidTestImplementation Dep.android.junit
+    androidTestImplementation Dep.android.kaspresso
+    debugImplementation Dep.android.fragmentTesting
+}

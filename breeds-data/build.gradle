@@ -1,0 +1,18 @@
+apply from: '../android-lib.gradle'
+apply plugin: 'kotlinx-serialization'
+
+dependencies {
+    implementation project(':core')
+
+    api Dep.kotlin.okHttpLogging
+    api Dep.kotlin.kotlinSerialization
+    api Dep.kotlin.retrofit
+    api Dep.kotlin.retrofitRxJava
+    api Dep.kotlin.retrofitKotlinSerialization
+
+    testImplementation Dep.kotlin.spekRuntime
+    testImplementation Dep.kotlin.spekJvm
+    testImplementation Dep.kotlin.kotlinTest
+    testImplementation Dep.kotlin.kotlinAssertions
+    testImplementation Dep.kotlin.mockWebServer
+}
